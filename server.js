@@ -23,6 +23,10 @@ app.use(express.json());
 // 	next();
 // });
 
+app.get("/", (req, res) => {
+	res.sendStatus(200);
+});
+
 // define routes
 app.use("/api/users", require("./routes/api/users.js"));
 app.use("/api/auth", require("./routes/api/auth"));
